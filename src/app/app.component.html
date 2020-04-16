@@ -6,24 +6,39 @@
   <br/><br/>
   25 + 25 = {{25 + 25}}
 </p>
-<ng-template
-  *ngIf = "show;then showBlock; else notshowBlock">
-</ng-template>
 
-<ng-template #showBlock>
-  show block
-</ng-template>
-
-<ng-template #notshowBlock>
-  not show block
-</ng-template>
 
 
 <p>
-  <input [(ngModel)] = "a" type="text" /> * 
+  <input ng-value="myVar" [(ngModel)] = "bil1" type="text" /> ^ 
+  <input [(ngModel)] = "pangkat" type="text" /> =
+  <br/>
+</p> 
+<p [(ngModel)] = "hasil">
+   : {{bil1*pangkat}}
+</p> 
+{{hasil}}
+<p>
+      <span *ngFor="let item of arrayOne(8); let i = index;">{{i}} </span>
+</p>
+ <br/>
+ <!-- Odd Even -->
+<ng-template
+  *ngIf = "bil1*pangkat % 2 == 0;then showBlock; else notshowBlock">
+</ng-template>
+<ng-template #showBlock>
+  Even, Pola B
+</ng-template>
+
+<ng-template #notshowBlock>
+  Odd, Pola A
+</ng-template>
+
+<!-- <p>
+  <input [(ngModel)] = "a" type="text" /> ^ 
   <input [(ngModel)] = "b" type="text" /> =
   <br/>{{a*b}}
 </p>
 
 <button (click) = "KlikButton()">Tekan</button>
-{{Pesan}}
+{{Pesan}} -->

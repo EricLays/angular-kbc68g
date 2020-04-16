@@ -25,10 +25,15 @@ export class AppComponent  {
     };
   
   itemArr = [1,2,3,4];
-  show : boolean = true;
   Pesan = '';
+  bil1 = 0;
+  pangkat = 0;
+  hasil = 0;
   KlikButton()
   {
     this.Pesan = 'Tombol Ditekan'
+  }
+  arrayOne(n: number): any[] {
+    return Array(n);
   }
 }
