@@ -26,4 +26,9 @@ export class AppComponent  {
   
   itemArr = [1,2,3,4];
   show : boolean = true;
+  Pesan = '';
+  KlikButton()
+  {
+    this.Pesan = 'Tombol Ditekan'
+  }
 }

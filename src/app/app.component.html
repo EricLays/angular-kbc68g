@@ -6,18 +6,24 @@
   <br/><br/>
   25 + 25 = {{25 + 25}}
 </p>
-<div *ngFor="let buah of item">
-    {{buah.nama}} = {{buah.harga | currency:'Rp '}}
-</div>
-<div *ngFor="let data of itemArr">
-    isi : {{data}}
-</div>
+<ng-template
+  *ngIf = "show;then showBlock; else notshowBlock">
+</ng-template>
 
-<p *ngIf = "show">
-  Tampilkan Isi
+<ng-template #showBlock>
+  show block
+</ng-template>
+
+<ng-template #notshowBlock>
+  not show block
+</ng-template>
+
+
+<p>
+  <input [(ngModel)] = "a" type="text" /> * 
+  <input [(ngModel)] = "b" type="text" /> =
+  <br/>{{a*b}}
 </p>
 
-<p *ngIf = "user.nama">
-  {{user.nama}}
-  ada isi
-</p>
+<button (click) = "KlikButton()">Tekan</button>
+{{Pesan}}
